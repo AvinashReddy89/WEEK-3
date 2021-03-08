@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_3_1</title>
+</head>
+
+<body>
+   
+    <script>
+        // Objects as Functional parameters
+
+     
+        class Student {
+
+            constructor(name, roll, gpa) {
+                this.name = name;
+                this.roll = roll;
+                this.gpa = gpa;
+
+            }
+        }
+        function display(s) {
+            console.log("name " + s.name);
+            console.log("roll " + s.roll);
+            console.log("gpa " + s.gpa);
+
+        }
+        var s = new Student('avi', 123, 9.0);
+        display(s);
+
+        
+
+
+
+        //array destructuring
+        var x = [11, 12, 13, 14, 15, 16];
+        var [r1, r2, r3, r4, r5, r6] = x;
+        console.log("array destructuring");
+        console.log(r1 + " " + r2 + " " + r3 + " " + r4 + " " + r5 + " " + r6 + " ");
+
+        //object destructuring 
+        var a = { name: "avi", roll: 123, gpa: 9.0 };
+        const { name, roll, gpa } = a;
+        console.log("object destructuring");
+        console.log(name + " " + roll + " " + gpa);
+
+
+        //Array functions .
+        console.log("array functions");
+        Array = ['a', 'b', 'c', 'e', 'f', 'g'];
+        console.log(Array);
+        console.log("asdkljh");
+        Array.push('d');
+        console.log("array after push : " + Array);
+        var x = Array.pop();
+        console.log("deleted element  : " + x);
+        Array.shift();
+        console.log("after shift : " + Array);
+        Array.unshift();
+        console.log(Array);
+        var len = Array.length;
+        console.log("length is : " + len);
+        var arr = Array.slice(2, 4);
+        console.log("after slice : " + arr);
+
+        //rest operator .
+        console.log("rest operator");
+        [a, b, ...rest] = [1, 2, 3, 4, 5];
+        console.log(a);
+        console.log(b);
+        console.log(rest);
+
+    </script>
+</body>
+
+</html>
